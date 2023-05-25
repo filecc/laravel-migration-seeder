@@ -25,10 +25,9 @@ class TrainTableSeeder extends Seeder
 
             $time = DateTime::createFromFormat('H:i:s', $fakeTime);
 
-            // Aggiungi 2 ore all'oggetto DateTime
+
             $time->add(new DateInterval('PT'.rand(1,6).'H'));
 
-            // Ottieni l'ora aggiornata come stringa nel formato "H:i:s"
             $destiny_time = $time->format('H:i:s');
 
             $newTrain = new Train();
